@@ -1,6 +1,8 @@
 "put some plugins
 call plug#begin()
 
+Plug 'ervandew/supertab'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'jiangmiao/auto-pairs' " enable auto close stuff
@@ -25,6 +27,7 @@ endif
 :set shiftwidth=2
 :set wrap linebreak
 :syntax on
+:set mouse=a
 
 " nerd tree
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -38,10 +41,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" " Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+" " Open the existing NERDTree on each new tab.
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
