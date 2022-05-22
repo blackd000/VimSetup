@@ -6,17 +6,21 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'jiangmiao/auto-pairs' " enable auto close stuff
-Plug 'https://github.com/frazrepo/vim-rainbow.git' " highlight braces
-Plug 'drewtempelmeyer/palenight.vim' " enable theme
+" Plug 'drewtempelmeyer/palenight.vim' " enable theme
+Plug 'luochen1990/rainbow' " highlight braces
+" Plug 'https://github.com/tomasr/molokai.git'
 Plug 'https://github.com/vim-airline/vim-airline.git' " enable airline
 
 call plug#end()
 
 let g:rainbow_active = 1
 
+packadd! dracula
+
 " manualy set up
 :set background=dark
-:colorscheme palenight
+" :colorscheme palenight
+:colorscheme dracula
 " set theme to true color, the color of the terminal in vim suck fuck
 if (has("termguicolors"))
   set termguicolors
@@ -26,7 +30,7 @@ endif
 :set tabstop=2
 :set shiftwidth=2
 :set wrap linebreak
-:syntax on
+:syntax enable
 :set mouse=a
 
 " nerd tree
