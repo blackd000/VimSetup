@@ -23,9 +23,10 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Noto Sans Regular 12
+# font pango: Noto Sans Regular 12
+font pango:FontAwesome 12
 
-# modifier = Alt, $sup = Wind0ws key
+# modifier = Alt, $sup = WiNd0wS key
 set $mod Mod1
 set $sup Mod4
 
@@ -277,7 +278,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 # bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+n exec /usr/bin/virtualbox
+bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+w exec /usr/bin/brave
 # bindsym Print exec scrot ~/Pictures/FlameShots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/FlameShots$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym $sup+Shift+s exec flameshot gui
@@ -312,7 +313,7 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
+# assign [class="Xfce4-terminal"] $ws1
 # assign [class="(?i)firefox"] $ws2
 # assign [class="Thunar"] $ws3
 # assign [class="Thunderbird"] $ws4
@@ -350,10 +351,11 @@ for_window [class=Thunar instance=thunar] floating enable
 # For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
 #
 # using default config 
-exec_always --no-startup-id picom -b
+# exec_always --no-startup-id picom -b
+# exec --no-startup-id picom -CGb
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -387,8 +389,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-# exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id feh --bg-fill /home/keilar/Pictures/SavedPictures/anime-street-road-buildings-scenery-night-stars-anime-35152-1920x1080.jpeg
+exec --no-startup-id sleep 1 && nitrogen --restore
+# exec --no-startup-id feh --bg-fill /home/keilar/Pictures/SavedPictures/anime-street-road-buildings-scenery-night-stars-anime-35152-1920x1080.jpeg
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -443,6 +445,9 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="MEGAsync" instance="megasync"] floating enable
+for_window [class="Crow Translate" instance="crow"] floating enable
+for_window [class="Sxiv" instance="sxiv"] floating enable
 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
@@ -494,7 +499,7 @@ client.urgent		    		$urgentred	$urgentred	$white		$purple			$yellowbrown
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: Noto Sans Regular 11
+		font pango:FontAwesome 12
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position bottom
 #	    	i3bar_command i3bar --transparency
@@ -580,6 +585,6 @@ bindsym $mod+t exec rofi -show window \
 
 ##############
 bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
-# bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
-# bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+j resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+k resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+h resize shrink width 1 px or 1 ppt
