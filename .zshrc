@@ -3,6 +3,13 @@
 # Convert some stuffs
 alias ls='ls --color=auto'
 
+# history setup
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=300
+HISTSIZE=299
+setopt HIST_EXPIRE_DUPS_FIRST
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 # Load version control information
