@@ -280,6 +280,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 # bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+w exec /usr/bin/brave
+bindsym $mod+u exec /usr/bin/code
 # bindsym Print exec scrot ~/Pictures/FlameShots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/FlameShots$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym $sup+Shift+s exec flameshot gui
 
@@ -448,6 +449,7 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="MEGAsync" instance="megasync"] floating enable
 for_window [class="Crow Translate" instance="crow"] floating enable
 for_window [class="Sxiv" instance="sxiv"] floating enable
+for_window [class="Brave-browser" instance="crx_amfojhdiedpdnlijjbhjnhokbnohfdfb"] floating enable
 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
