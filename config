@@ -54,6 +54,7 @@ new_window pixel 4
 
 # thin borders
 # hide_edge_borders both
+hide_edge_borders smart
 
 # Set inner/outer gaps
 gaps inner 0
@@ -416,7 +417,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
 # `yay -S autotiling ;) (it is in AUR)
-#exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
@@ -489,9 +490,9 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		            	border			bground			text			indicator		child_border
-client.focused 					#555555 		#555555 		#ffffff 	#2e9ef4     #CC0000
-client.unfocused	    	$darkblue		$darkblue		$grey 		$purple			$darkgrey
-client.focused_inactive	$darkblue		$darkblue		$grey			$purple			$black
+client.focused 					#FF0000 		#FF0000 		#ffffff 	#3333FF     #FF0000
+client.unfocused	    	$darkblue		$darkblue		$grey 		#606060			#606060
+client.focused_inactive	$darkblue		$darkblue		$grey			#606060			#606060
 client.urgent		    		$urgentred	$urgentred	$white		$purple			$yellowbrown
 
 ############################################
