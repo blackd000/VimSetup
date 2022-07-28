@@ -12,13 +12,12 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-# Load version control information
-autoload -Uz vcs_info
+
+autoload -Uz vcs_info # Load version control information
 precmd() { vcs_info }
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '(%b)'
-# Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
+zstyle ':vcs_info:git:*' formats '(%b)' # Format the vcs_info_msg_0_ variable
+setopt PROMPT_SUBST # Set up the prompt (with git branch name)
+
 PROMPT='%B╭─%{$fg[yellow]%}%n@%M %{$fg[cyan]%}%~ %{$fg[magenta]%}${vcs_info_msg_0_}
 %{$fg[white]%}╰─$%{$reset_color%}%b '
 
