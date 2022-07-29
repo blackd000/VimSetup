@@ -18,7 +18,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '(%b)' # Format the vcs_info_msg_0_ variable
 setopt PROMPT_SUBST # Set up the prompt (with git branch name)
 
-PROMPT='%B╭─%{$fg[yellow]%}%n@%M %{$fg[cyan]%}%~ %{$fg[magenta]%}${vcs_info_msg_0_}
+PROMPT='%B%{$fg[white]%}╭─%{$fg[yellow]%}%n@%M %{$fg[cyan]%}%~ %{$fg[magenta]%}${vcs_info_msg_0_}
 %{$fg[white]%}╰─$%{$reset_color%}%b '
 
 # Basic auto/tab complete:
