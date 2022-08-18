@@ -6,6 +6,8 @@ Plug 'luochen1990/rainbow' " highlight braces
 
 call plug#end()
 
+let g:rainbow_active = 1
+
 :set number
 :set tabstop=2
 :set shiftwidth=2
