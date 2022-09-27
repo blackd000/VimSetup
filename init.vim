@@ -27,7 +27,8 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " map some stuffs
 nnoremap <C-t> :NERDTree<CR>
 " nnoremap <f5> :vsplit <esc>:term g++ -std=c++17 -o %:r.out %:t && ./%:r.out && rm *.out<enter>
-nnoremap <f5> :split <esc>:term g++ -std=c++17 -o %:r.out %:t && ./%:r.out && rm *.out<enter>
+" nnoremap <f5> :split <esc>:term g++ -std=c++17 -o %:r.out %:t && ./%:r.out && rm *.out<enter>
+nnoremap <f5> :split <esc>:term gcc -o %:r.out %:t && ./%:r.out && rm *.out<enter>
 
 vnoremap <C-c> "+y
 map <C-v> "+p
