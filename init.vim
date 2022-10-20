@@ -8,6 +8,19 @@ Plug 'preservim/nerdtree'
 call plug#end()
 
 let g:rainbow_active = 1
+" this is only for windows
+let g:clipboard = { 
+			\   'name': 'wslclipboard',
+			\   'copy': {
+			\      '+': '/mnt/c/Users/Administrator/Documents/OtherStuff/win32yank-x64/win32yank.exe -i --crlf',
+			\      '*': '/mnt/c/Users/Administrator/Documents/OtherStuff/win32yank-x64/win32yank.exe -i --crlf',
+			\    },
+			\   'paste': {
+			\      '+': '/mnt/c/Users/Administrator/Documents/OtherStuff/win32yank-x64/win32yank.exe -o --lf',
+			\      '*': '/mnt/c/Users/Administrator/Documents/OtherStuff/win32yank-x64/win32yank.exe -o --lf',
+			\   },
+			\   'cache_enabled': 1,
+			\ }
 
 :set number
 :set tabstop=2
@@ -16,7 +29,7 @@ let g:rainbow_active = 1
 :set nohls
 :syntax enable
 :set mouse=a
-:set clipboard=unnamedplus
+
 :set splitbelow
 
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
@@ -27,7 +40,7 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " map some stuffs
 nnoremap <C-t> :NERDTree<CR>
 " nnoremap <f5> :vsplit <esc>:term g++ -std=c++17 -o %:r.out %:t && ./%:r.out && rm *.out<enter>
-" nnoremap <f5> :split <esc>:term g++ -std=c++17 -o %:r.out %:t && ./%:r.out && rm *.out<enter>
+" nnoremap <f5> :split <esc>:term g++ -o %:r.out %:t && ./%:r.out && rm *.out<enter>
 nnoremap <f5> :split <esc>:term gcc -o %:r.out %:t && ./%:r.out && rm *.out<enter>
 
 vnoremap <C-c> "+y
