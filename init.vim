@@ -1,9 +1,11 @@
 call plug#begin()
 
-Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/tpope/vim-commentary.git' " for commenting stuff
 Plug 'jiangmiao/auto-pairs' " enable auto close stuff
 Plug 'luochen1990/rainbow' " highlight braces
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree' " NerdTree
+Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
+Plug 'ervandew/supertab' " for press tab to auto complete
 
 call plug#end()
 
