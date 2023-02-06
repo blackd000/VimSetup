@@ -1,7 +1,14 @@
-# Created by keilar for 5.8
+# Created by keilar for 5.8.1
 
 # Convert some stuffs
 alias ls='ls --color=auto'
+alias open='xdg-open'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+alias gotoAdmin='cd /mnt/c/Users/Administrator'
+alias codeCpp='cd /home/keilar/Programming/Cpp && ranger'
+alias codeHtmlCss='cd /mnt/c/Users/Administrator/Documents/Programming/Html-Css && code .'
+alias gotoSQL='cd /mnt/c/Users/Administrator/Documents/Programming/Sql'
 
 # history setup
 setopt SHARE_HISTORY
@@ -61,4 +68,4 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Load zsh-syntax-highlighting; should be last.
-source /home/keilar/Documents/Program/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /home/keilar/Program/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
