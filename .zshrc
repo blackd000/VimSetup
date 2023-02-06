@@ -6,9 +6,9 @@ alias open='xdg-open'
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 alias gotoAdmin='cd /mnt/c/Users/Administrator'
+alias gotoSQL='cd /mnt/c/Users/Administrator/Documents/Programming/Sql'
 alias codeCpp='cd /home/keilar/Programming/Cpp && ranger'
 alias codeHtmlCss='cd /mnt/c/Users/Administrator/Documents/Programming/Html-Css && code .'
-alias gotoSQL='cd /mnt/c/Users/Administrator/Documents/Programming/Sql'
 
 # history setup
 setopt SHARE_HISTORY
