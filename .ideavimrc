@@ -1,0 +1,6 @@
+set visualbell
+
+" Navigate to previous tab
+nnoremap <C-h> :action PreviousTab<CR>
+" Navigate to next tab
+nnoremap <C-l> :action NextTab<CR>
